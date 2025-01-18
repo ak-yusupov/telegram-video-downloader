@@ -37,11 +37,17 @@ class InstagramHandler(BaseHandler):
         if not ig_id:
             return None
 
+        params = {
+        "__a": "1",
+        "__d": "dis"
+        }
+
         try:
             response = requests.get(
-                f"https://www.instagram.com/p/{ig_id}?__a=1&__d=dis",
+                f"https://www.instagram.com/p/{ig_id}",
                 headers=INSTAGRAM_CREDENTIALS['headers'],
-                cookies=INSTAGRAM_CREDENTIALS['cookies']
+                cookies=INSTAGRAM_CREDENTIALS['cookies'],
+                params=params   
             )
             response.raise_for_status()
             
