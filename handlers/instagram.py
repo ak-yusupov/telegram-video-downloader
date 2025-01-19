@@ -47,7 +47,8 @@ class InstagramHandler(BaseHandler):
                 f"https://www.instagram.com/p/{ig_id}",
                 headers=INSTAGRAM_CREDENTIALS['headers'],
                 cookies=INSTAGRAM_CREDENTIALS['cookies'],
-                params=params   
+                params=params,
+                timeout=15
             )
             response.raise_for_status()
             

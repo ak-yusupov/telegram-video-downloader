@@ -18,7 +18,16 @@ INSTAGRAM_CREDENTIALS = {
         "Referer": "https://www.instagram.com",
         "Accept": "*/*",
         "Accept-Language": "ru-RU",
-        "Connection": "keep-alive"
+        "Connection": "keep-alive",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Host": "www.instagram.com",
+        "Origin": "https://www.instagram.com",
+        "Referer": "https://www.instagram.com/reels/",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Dest": "empty",
+        "User-Agent": os.getenv('USER_AGENT'),
     },
     'cookies': {}
 }
